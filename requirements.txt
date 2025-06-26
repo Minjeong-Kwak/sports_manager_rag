@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+openai
+faiss-cpu
+tiktoken
+pypdf
+pytesseract
+pillow
+python-dotenv
+rank_bm25
+requests
+numpy

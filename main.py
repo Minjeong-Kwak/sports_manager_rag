@@ -1,8 +1,6 @@
 from modules.pdf_loader import extract_questions_and_answers
 from modules.vector_store import create_faiss_index, search_faiss, generate_response
 from modules.problem_solver import solve_text_problem, solve_image_problem, solve_pdf_problem, generate_mcq
-from modules.logger import log_interaction
-from modules.feedback import interactive_feedback
 import modules.vector_store as vector_store
 from modules.text_processing import chunk_text
 

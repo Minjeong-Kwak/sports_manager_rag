@@ -153,21 +153,12 @@ def main():
                 type_out(gpt_response)
 
                 execution_time = time.time() - start_time
-                log_interaction(query, results, gpt_response, execution_time)
 
             except Exception as e:
                 execution_time = time.time() - start_time
                 print(f"❌ 오류 발생: {e}")
-                log_interaction(query, [], "❌ 오류 발생", execution_time, str(e))
                 gpt_response = "❌ 오류 발생"
                 results = []  # ✅ 예외 발생 시 빈 리스트 설정
-
-        # ✅ 1. 모든 질문과 답변이 끝난 후 피드백 요청
-        new_query = interactive_feedback(query, gpt_response, results)
-
-        # ✅ 2. 피드백이 끝난 후, 새로운 질문을 다시 받도록 루프 유지
-        if new_query:  
-            query = new_query
 
 # ✅ main() 실행 코드 추가 (위치는 main() 함수 정의 이후)
 if __name__ == "__main__":
